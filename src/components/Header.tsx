@@ -4,7 +4,7 @@ import { IconBookmarks, IconExplorer, IconHome, IconLists, IconLogo, IconMessage
 
 export function Header(){
   return(
-    <header className="w-[80px] xl:w-[266px] px-3 flex flex-col sticky left-0">
+    <header className="w-[80px] xl:w-[266px] px-3 flex flex-col sticky top-0 max-h-screen left-0">
       <Link to="/" className="hover:bg-sky-100">
         <IconLogo />
       </Link>

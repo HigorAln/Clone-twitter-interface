@@ -7,14 +7,6 @@ import { ButtonIcon } from "./ButtonIcon";
 export function WriteTwitter(){
   return (
     <div className="w-full border-b border-gray-100 px-4">
-      <span className="flex justify-between">
-        <h1 className="my-3 text-lg font-bold">Home</h1>
-        
-        {/* <ButtonIcon> */}
-          <IconStars />
-        {/* </ButtonIcon> */}
-      </span>
-
       <div className="flex pt-2">
         <div className="w-14 h-full">
           <img src="https://github.com/higoraln.png" className="w-12 h-12 rounded-full" />

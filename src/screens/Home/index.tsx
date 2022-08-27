@@ -1,11 +1,11 @@
 import { Header } from "../../components/Header";
-import { Footer } from "../Footer";
-import { Main } from "../Main";
+import { Footer } from "../../components/Footer";
+import { Main } from "../../components/Main";
 
 
 export function Home(){
   return(
-    <div className="w-screen flex justify-center">
+    <div className="flex justify-center">
       <div className="max-w-[1280px] w-full flex min-h-screen gap-2">
         <Header />
 
