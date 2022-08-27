@@ -10,11 +10,14 @@ interface Props {
 
 export function Link({ to, className, children, title}: Props){
   return(
-    <NavLink to={to}>
-      <a className={`flex gap-6 items-center p-2 px-4 w-fit ${className} rounded-full hover:bg-gray-200 transition-colors`}>
-        {children}
-        {title && <p className="text-[24px]">{title}</p>}
-      </a>
-    </NavLink>
+    <div className="flex p-[5px]">
+      <NavLink to={to}>
+        <a className={`flex gap-5 items-center p-1 px-2 pr-5 w-fit rounded-full transition-colors ${className ? className : "hover:bg-gray-200"}`}>
+          {children}
+          {title && <p className="text-[19px]">{title}</p>}
+        </a>
+      </NavLink>
+    </div>
+
   )
 }
