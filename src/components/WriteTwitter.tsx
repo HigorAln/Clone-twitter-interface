@@ -8,7 +8,7 @@ export function WriteTwitter(){
   return (
     <div className="w-full border-b border-gray-100 px-4">
       <div className="flex pt-2">
-        <div className="w-14 h-full">
+        <div className="w-14 h-full min-w-[56px]">
           <img src="https://github.com/higoraln.png" className="w-12 h-12 rounded-full" />
         </div>
 
@@ -46,7 +46,7 @@ export function WriteTwitter(){
             </span>
 
 
-            <button className="flex items-center justify-center border rounded-full bg-[#7856FF] text-white font-bold w-[75px] h-[38px] opacity-50 mb-3">
+            <button className="flex items-center justify-center border rounded-full bg-[#7856FF] text-white text-sm font-bold w-[75px] h-[38px] opacity-50 mb-3">
               Tweet
             </button>
           </div>

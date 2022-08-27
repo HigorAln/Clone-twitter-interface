@@ -7,6 +7,9 @@ module.exports = {
 		extend: {
       fontFamily: {
         sans: "Poppins, sans-serif",
+      },
+      screens: {
+        lg: "1124px"
       }
     },
 	},

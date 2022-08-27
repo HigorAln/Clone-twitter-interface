@@ -1,6 +1,7 @@
 import { Link } from "./Link";
 import { DotsThree } from 'phosphor-react'
-import { IconBookmarks, IconExplorer, IconHome, IconLists, IconLogo, IconMessages, IconMore, IconNotifications, IconProfile } from "../Icons";
+import { IconBookmarks, IconExplorer, IconHome, IconLists, IconLogo, IconMessages, IconMore, IconNotifications, IconProfile, IconSearch } from "../Icons";
+import { IconTweet } from '../Icons/index';
 
 export function Header(){
   return(
@@ -11,8 +12,11 @@ export function Header(){
       <Link to="/" title="Home">
         <IconHome />
       </Link>
-      <Link to="/explorer" title="Explore">
+      <Link to="/explorer" title="Explore" classNameDiv="hidden lg:flex">
         <IconExplorer />
+      </Link>
+      <Link to="/explorer" title="Explore" classNameDiv="flex lg:hidden">
+        <IconSearch />
       </Link>
       <Link to="/" title="Notifications">
         <IconNotifications />
@@ -33,19 +37,25 @@ export function Header(){
         <IconMore /> 
       </Link>
 
-      <button className="bg-[#7856FF] p-[14px] w-[95%] self-center mt-4 rounded-full text-md font-bold text-white hover:bg-[#6948e8] transition-colors">Tweet</button>
+      <button className="bg-[#7856FF] p-[14px] w-[95%] self-center mt-4 rounded-full text-md font-bold text-white hover:bg-[#6948e8] transition-colors hidden xl:block">
+        Tweet
+      </button>
+
+      <button className="bg-[#7856FF] p-[14px] w-[95%] self-center mt-4 rounded-full text-md font-bold text-white hover:bg-[#6948e8] transition-colors flex xl:hidden">
+        <IconTweet className=""/>
+      </button>
 
 
-      <div className="flex-1 flex items-end ">
+      <div className="flex-1 flex items-end">
         <button className="flex gap-2 rounded-full px-2 w-full h-16 mb-2 items-center hover:bg-gray-200 transition-colors">
           <img src="https://github.com/higoraln.png" className="w-10 h-10 rounded-full" />
 
-          <span className="flex-1 h-full flex flex-col justify-center items-start ">
+          <span className="flex-1 h-full flex-col justify-center items-start hidden xl:flex">
             <strong className="text-sm">Higor Allan</strong>
             <p className="text-xs text-gray-500">@HigorAllan4</p>
           </span>
 
-          <button className="flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+          <button className="items-center justify-center rounded-full hover:bg-gray-100 transition-colors  hidden xl:flex">
             <DotsThree size={20} weight="bold"/>
           </button>
         </button>
