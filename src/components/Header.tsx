@@ -2,13 +2,18 @@ import { Link } from "./Link";
 import { DotsThree } from 'phosphor-react'
 import { IconBookmarks, IconExplorer, IconHome, IconLists, IconLogo, IconMessages, IconMore, IconNotifications, IconProfile, IconSearch } from "../Icons";
 import { IconTweet } from '../Icons/index';
+import { NavLink } from "react-router-dom";
 
 export function Header(){
   return(
     <header className="w-[80px] xl:w-[266px] px-3 flex flex-col sticky top-0 max-h-screen left-0">
-      <Link to="/" className="hover:bg-sky-100">
-        <IconLogo />
-      </Link>
+      <div className={`flex p-[5px]`}>
+        <NavLink to={""}>
+          <a className={`flex gap-5 items-center p-2 px-2 py-0 xl:py-3 xl:px-3 xl:pr-3 w-fit rounded-full transition-colors hover:bg-sky-100`}>
+            {<IconLogo />}
+          </a>
+        </NavLink>
+      </div>
       <Link to="/" title="Home">
         <IconHome />
       </Link>

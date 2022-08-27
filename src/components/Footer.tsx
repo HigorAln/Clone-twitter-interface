@@ -21,7 +21,7 @@ export function Footer(){
 
         <NewNotice 
           tags={["Trending in Brazil"]} 
-          title="BOBO DA CORTE" 
+          title="Belle Belinha" 
           tweets={"22.4K"}
         />
 
