@@ -17,28 +17,28 @@ export function Header(){
       <Link to="/" title="Home">
         <IconHome />
       </Link>
-      <Link to="/explorer" title="Explore" classNameDiv="hidden lg:flex">
+      <Link to="/explore" title="Explore" classNameDiv="hidden lg:flex">
         <IconExplorer />
       </Link>
       <Link to="/explorer" title="Explore" classNameDiv="flex lg:hidden">
         <IconSearch />
       </Link>
-      <Link to="/" title="Notifications">
+      <Link to="/notifications" title="Notifications">
         <IconNotifications />
       </Link>
-      <Link to="/" title="Messages">
+      <Link to="/message" title="Messages">
         <IconMessages /> 
       </Link>
-      <Link to="/" title="Bookmarks">
+      <Link to="/bookmarks" title="Bookmarks">
         <IconBookmarks /> 
       </Link>
-      <Link to="/" title="Lists">
+      <Link to="/lists" title="Lists">
         <IconLists /> 
       </Link>
-      <Link to="/" title="Profile">
+      <Link to="/profile" title="Profile">
         <IconProfile /> 
       </Link>
-      <Link to="/" title="More">
+      <Link to="/more" title="More">
         <IconMore /> 
       </Link>
 

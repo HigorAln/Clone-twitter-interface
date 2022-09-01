@@ -66,6 +66,7 @@ export function Main(){
         <h1 className="py-3 text-lg font-bold">Home</h1>
         <IconStars />
       </span>
+      
       <WriteTwitter />
 
       {tweets.map((tweet) => {

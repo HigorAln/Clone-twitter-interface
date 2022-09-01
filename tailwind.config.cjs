@@ -10,6 +10,10 @@ module.exports = {
       },
       screens: {
         lg: "1124px"
+      },
+      colors: {
+        primary_purple: "#7856ff",
+        primary_blue: "#1D9BF0"
       }
     },
 	},
