@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Router } from './router'
+import { SkeletonTheme } from "react-loading-skeleton";
+import { Router } from "./router";
 
 function App() {
   return (
-    <Router />
-  )
+    <SkeletonTheme baseColor="#e8e5ff" highlightColor="#dedaff">
+      <Router />
+    </SkeletonTheme>
+  );
 }
 
-export default App
+export default App;

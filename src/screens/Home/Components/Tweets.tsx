@@ -1,8 +1,16 @@
 import { DotsThree } from "phosphor-react";
-import { IconComment, IconFontComment, IconFontHealth, IconFontReTweet, IconHeath, IconReTwitter, IconShare } from "../Icons";
-import { ButtonIcon } from './ButtonIcon';
-import { formatDistanceToNow } from 'date-fns'
-import PtBr from 'date-fns/locale/pt-BR'
+import {
+  IconComment,
+  IconFontComment,
+  IconFontHealth,
+  IconFontReTweet,
+  IconHeath,
+  IconReTwitter,
+  IconShare,
+} from "../../../Icons";
+import { ButtonIcon } from "../../../components/ButtonIcon";
+import { formatDistanceToNow } from "date-fns";
+import PtBr from "date-fns/locale/pt-BR";
 
 interface Props {
   name: string;
@@ -16,7 +24,7 @@ interface Props {
   font?: {
     name: string;
     interaction: "HEALTH" | "COMMENT" | "FORWARD";
-  },
+  };
   date: string;
   description: string;
 }
@@ -28,19 +36,23 @@ export function Tweet({
   font,
   interactions,
   username,
-  description
-}: Props){
+  description,
+}: Props) {
   const fontIcons = {
-    "HEALTH": () => <IconFontHealth />,
-    "FORWARD": () => <IconFontReTweet />,
-    "COMMENT": () => <IconFontComment />,
-  }
+    HEALTH: () => <IconFontHealth />,
+    FORWARD: () => <IconFontReTweet />,
+    COMMENT: () => <IconFontComment />,
+  };
 
-  const dateDistance = formatDistanceToNow(new Date(date), {locale: PtBr, addSuffix: false});
-  const dateFormatted = dateDistance.includes("horas") ? 
-  `${dateDistance.replace(/\D/ig, "")}h` : `${dateDistance.replace(/\D/ig, '')}d`
+  const dateDistance = formatDistanceToNow(new Date(date), {
+    locale: PtBr,
+    addSuffix: false,
+  });
+  const dateFormatted = dateDistance.includes("horas")
+    ? `${dateDistance.replace(/\D/gi, "")}h`
+    : `${dateDistance.replace(/\D/gi, "")}d`;
 
-  return(
+  return (
     <div className="border-b py-3 flex flex-col cursor-pointer hover:bg-gray-100 transition-colors">
       {font && (
         <span className="pl-14 text-[13px] font-bold text-gray-500 flex items-center gap-3">
@@ -50,23 +62,23 @@ export function Tweet({
       )}
       <div className="flex px-4 gap-3">
         <img src={avatar_url} className="w-12 h-12 rounded-full" />
-        
+
         <div className="flex flex-col flex-1">
           <span className="flex justify-between relative">
             <span className="flex gap-2">
-              <strong className="text-sm">{name}{" "}</strong>
-              <p className="text-sm text-gray-500">@{username} · {dateFormatted}</p>
+              <strong className="text-sm">{name} </strong>
+              <p className="text-sm text-gray-500">
+                @{username} · {dateFormatted}
+              </p>
             </span>
 
             <ButtonIcon className="absolute right-0 -top-2">
-              <DotsThree size={20} weight="bold" className=""/>
+              <DotsThree size={20} weight="bold" className="" />
             </ButtonIcon>
           </span>
 
           <span className="mt-1">
-            <p className="text-sm text-gray-800">
-              {description}
-            </p>
+            <p className="text-sm text-gray-800">{description}</p>
           </span>
 
           <span className="flex justify-between -ml-2 mt-2">
@@ -79,7 +91,9 @@ export function Tweet({
             <div className="flex flex-1">
               <ButtonIcon className="hover:bg-emerald-50">
                 <IconReTwitter />
-                <p className="text-xs text-gray-700">{interactions.reTwitters}</p>
+                <p className="text-xs text-gray-700">
+                  {interactions.reTwitters}
+                </p>
               </ButtonIcon>
             </div>
             <div className="flex flex-1">
@@ -97,5 +111,5 @@ export function Tweet({
         </div>
       </div>
     </div>
-  )
+  );
 }

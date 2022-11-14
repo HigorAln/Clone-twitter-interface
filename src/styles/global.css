@@ -4,12 +4,10 @@
 
 .after_explorer::after {
   content: "";
-  width: 60%;
+  width: 100%;
   height: 4px;
-  background-color: #7856ff;
-  position: absolute;
-  bottom: 0;
+  @apply bg-primary_blue;
   display: block;
-  margin: auto;
+  margin-top: 10px;
   border-radius: 20px;
 }
